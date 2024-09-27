@@ -1,0 +1,42 @@
+name: Check Quiz Answers
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-answers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Up Correct Answers
+        run: |
+          # Define correct answers directly in the script or load from a secret
+          echo "1: B" > correct_answers.txt
+          echo "2: B" >> correct_answers.txt
+          echo "3: C" >> correct_answers.txt
+          echo "4: D" >> correct_answers.txt
+          echo "5: A" >> correct_answers.txt
+        
+      - name: Extract Participant Answers
+        run: |
+          # Find the participant’s answer file
+          ANSWER_FILE=$(find . -name "quiz_answers_*.txt" | head -n 1)
+          if [ -z "$ANSWER_FILE" ]; then
+            echo "No answer file found!"
+            exit 1
+          fi
+
+          # Read participant answers
+          cat "$ANSWER_FILE" > participant_answers.txt
+
+      - name: Compare Answers
+        run: |
+          # Compare correct answers with participant's answers
+          if diff correct_answers.txt participant_answers.txt; then
+            echo "Answers correct. Ready to merge."
+          else
+            echo "Answers incorrect. Auto-merge not allowed."
+            exit 1
+          fi
