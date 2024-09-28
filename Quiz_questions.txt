@@ -1,4 +1,4 @@
-#Github-workshop-2024 (QUIZ)
+# Github-workshop-2024 (QUIZ)
 
 ## Instructions:
 - Please create a file named `quiz_answers_<your_username>.txt` with your answers.
@@ -7,49 +7,85 @@
 
 ---
 
-### Question 1: What does the acronym "SHA" stand for in Git commit hashes?
-[] A) Short Hash Address  
-[x] B) Secure Hash Algorithm  
-[] C) Simple Hash Array  
-[] D) Source Hash Architecture  
+### Question 1: What does the command `git init` do?
+[] A) Initializes a new branch  
+[x] B) Initializes a new Git repository  
+[] C) Commits the current changes  
+[] D) Creates a new remote  
 
 ---
 
-### Question 2: Which command is used to create a new branch in Git?
-[] A) git create branch  
-[] B) git checkout -b  
-[] C) git new branch  
-[] D) git branch add  
+### Question 2: Which command is used to check the status of your working directory and staging area?
+[] A) `git check`  
+[] B) `git verify`  
+[] C) `git status`  
+[] D) `git stage`  
 
 ---
 
-### Question 3: What’s the name of the hidden directory where Git stores its data?
-[] A) .gitstore  
-[] B) .repository  
-[] C) .git  
-[] D) .data  
+### Question 3: What does the `.gitignore` file do?
+[] A) Ignores all Git commands  
+[] B) Hides commits from history  
+[] C) Specifies which files or directories to ignore in a Git project  
+[] D) Renames branches automatically  
 
 ---
 
-### Question 4: Which animal is in the GitHub logo?
-[] A) Dog  
-[] B) Cat  
-[] C) Octopus  
-[] D) Bat  
+### Question 4: How do you create a copy of a repository on your local machine?
+[] A) `git clone`  
+[] B) `git copy`  
+[] C) `git download`  
+[] D) `git init`  
 
 ---
 
-### Question 5: What Git command is used to stage changes for commit?
-[] A) git add  
-[] B) git stage  
-[] C) git commit --stage  
-[] D) git ready  
+### Question 5: What is the command to view the commit history?
+[] A) `git history`  
+[] B) `git log`  
+[] C) `git commits`  
+[] D) `git track`  
 
 ---
+
+### Question 6: What does the command `git commit -m "message"` do?
+[] A) Moves files to the remote repository  
+[] B) Deletes the current commit  
+[] C) Commits the staged changes with a message  
+[] D) Merges branches  
+
+---
+
+### Question 7: What is a pull request in GitHub?
+[] A) A request to push code to the main branch  
+[] B) A request to merge code changes into another branch  
+[] C) A request to clone a repository  
+[] D) A request to delete a branch  
+
+---
+
+### Question 8: Which Git command is used to download changes from a remote repository?
+[] A) `git send`  
+[] B) `git push`  
+[] C) `git pull`  
+[] D) `git fetch`  
+
+---
+
+### Question 9: What does `git merge` do?
+[] A) Deletes branches  
+[] B) Combines changes from one branch into another  
+[] C) Splits branches into multiple ones  
+[] D) Clones a branch  
+
+---
+
+### Question 10: What is the purpose of a fork in GitHub?
+[] A) To delete a repository  
+[] B) To rename a repository  
+[] C) To create a copy of someone else’s repository under your account  
+[] D) To edit files directly in another user's repository  
 
 ## Submission:
 - After filling in your answers, submit your file via a pull request to this repo.
-- Ensure your filename follows the format: `quiz_answers_<your_username>.txt`.
+- Ensure your filename follows the format: `quiz_answers_<your_username>.txt`. For example; `quiz_answers_electrify-7.txt`.
 - Good luck!
-
-
