@@ -18,13 +18,13 @@
 ### Question 2: Which command is used to check the status of your working directory and staging area?
 [] A) `git check`  
 [] B) `git verify`  
-[] C) `git status`  
+[x] C) `git status`  
 [] D) `git stage`  
 
 ---
 
 ### Question 3: What does the `.gitignore` file do?
-[] A) Ignores all Git commands  
+[x] A) Ignores all Git commands  
 [] B) Hides commits from history  
 [] C) Specifies which files or directories to ignore in a Git project  
 [] D) Renames branches automatically  
@@ -32,7 +32,7 @@
 ---
 
 ### Question 4: How do you create a copy of a repository on your local machine?
-[] A) `git clone`  
+[x] A) `git clone`  
 [] B) `git copy`  
 [] C) `git download`  
 [] D) `git init`  
@@ -42,7 +42,7 @@
 ### Question 5: What is the command to view the commit history?
 [] A) `git history`  
 [] B) `git log`  
-[] C) `git commits`  
+[x] C) `git commits`  
 [] D) `git track`  
 
 ---
@@ -50,14 +50,14 @@
 ### Question 6: What does the command `git commit -m "message"` do?
 [] A) Moves files to the remote repository  
 [] B) Deletes the current commit  
-[] C) Commits the staged changes with a message  
+[x] C) Commits the staged changes with a message  
 [] D) Merges branches  
 
 ---
 
 ### Question 7: What is a pull request in GitHub?
 [] A) A request to push code to the main branch  
-[] B) A request to merge code changes into another branch  
+[x] B) A request to merge code changes into another branch  
 [] C) A request to clone a repository  
 [] D) A request to delete a branch  
 
@@ -65,7 +65,7 @@
 
 ### Question 8: Which Git command is used to download changes from a remote repository?
 [] A) `git send`  
-[] B) `git push`  
+[x] B) `git push`  
 [] C) `git pull`  
 [] D) `git fetch`  
 
@@ -73,7 +73,7 @@
 
 ### Question 9: What does `git merge` do?
 [] A) Deletes branches  
-[] B) Combines changes from one branch into another  
+[x] B) Combines changes from one branch into another  
 [] C) Splits branches into multiple ones  
 [] D) Clones a branch  
 
@@ -82,7 +82,7 @@
 ### Question 10: What is the purpose of a fork in GitHub?
 [] A) To delete a repository  
 [] B) To rename a repository  
-[] C) To create a copy of someone else’s repository under your account  
+[x] C) To create a copy of someone else’s repository under your account  
 [] D) To edit files directly in another user's repository  
 
 ## Submission:
