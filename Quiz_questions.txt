@@ -50,7 +50,7 @@
 ### Question 6: What does the command `git commit -m "message"` do?
 [] A) Moves files to the remote repository  
 [] B) Deletes the current commit  
-[] C) Commits the staged changes with a message  
+[x] C) Commits the staged changes with a message  
 [] D) Merges branches  
 
 ---
