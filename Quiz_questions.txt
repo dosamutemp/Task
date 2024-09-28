@@ -24,9 +24,9 @@
 ---
 
 ### Question 3: What’s the name of the hidden directory where Git stores its data?
-[x] A) .gitstore  
+[] A) .gitstore  
 [] B) .repository  
-[] C) .git  
+[x] C) .git  
 [] D) .data  
 
 ---
