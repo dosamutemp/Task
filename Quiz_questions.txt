@@ -17,14 +17,14 @@
 
 ### Question 2: Which command is used to create a new branch in Git?
 [] A) git create branch  
-[] B) git checkout -b  
+[x] B) git checkout -b  
 [] C) git new branch  
 [] D) git branch add  
 
 ---
 
 ### Question 3: What’s the name of the hidden directory where Git stores its data?
-[] A) .gitstore  
+[x] A) .gitstore  
 [] B) .repository  
 [] C) .git  
 [] D) .data  
@@ -34,13 +34,13 @@
 ### Question 4: Which animal is in the GitHub logo?
 [] A) Dog  
 [] B) Cat  
-[] C) Octopus  
+[x] C) Octopus  
 [] D) Bat  
 
 ---
 
 ### Question 5: What Git command is used to stage changes for commit?
-[] A) git add  
+[x] A) git add  
 [] B) git stage  
 [] C) git commit --stage  
 [] D) git ready  
