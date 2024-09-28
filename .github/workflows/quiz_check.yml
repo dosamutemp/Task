@@ -43,6 +43,7 @@ jobs:
       - name: Compare Answers
         run: |
           echo "Comparing answers..."
+          # Check if participant answers match correct answers exactly
           if cmp -s correct_answers.txt participant_answers.txt; then
             echo "Answers correct. Ready to merge."
           else
