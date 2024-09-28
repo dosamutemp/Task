@@ -25,12 +25,12 @@ jobs:
       - name: Extract Participant Answers
         run: |
           # Extract lines with marked answers, trim whitespaces, and format consistently
-          grep -o '^[0-9]*: \[x\].*' "$ANSWER_FILE" | sed 's/^\([0-9]*\): \[x\] \(.*\)/\1: \2/' | tr -d '\r' | sed '/^$/d' > participant_answers.txt
+          grep -o '^[0-9]*: \[x\].*' "$ANSWER_FILE" | sed 's/^\([0-9]*\): \[x\] \(.*\)/\1: \2/' | tr -d '\r' | sed '/^$/d' | sed 's/[[:space:]]\+$//' > participant_answers.txt
 
       - name: Create Correct Answers File from Secret
         run: |
           # Retrieve correct answers from GitHub secret and format consistently
-          echo "$CORRECT_ANSWERS" | tr -d '\r' | sed '/^$/d' > correct_answers.txt
+          echo "$CORRECT_ANSWERS" | tr -d '\r' | sed '/^$/d' | sed 's/[[:space:]]\+$//' > correct_answers.txt
         env:
           CORRECT_ANSWERS: ${{ secrets.CORRECT_ANSWERS }}
 
@@ -42,8 +42,8 @@ jobs:
 
       - name: Compare Answers
         run: |
-          # Compare ignoring whitespace and empty lines
-          if diff -wB correct_answers.txt participant_answers.txt; then
+          echo "Comparing answers..."
+          if cmp -s correct_answers.txt participant_answers.txt; then
             echo "Answers correct. Ready to merge."
           else
             echo "Answers incorrect. Auto-merge not allowed."
