@@ -2,32 +2,39 @@ name: Check Quiz Answers
 
 on:
   pull_request:
-    branches:
-      - main
+    paths:
+      - 'quiz_answers_*.txt'
 
 jobs:
   check-answers:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      
-      - name: Set Up Correct Answers
-        run: |
-          echo "1: ${{ secrets.ANSWER_1 }}" > correct_answers.txt
-          echo "2: ${{ secrets.ANSWER_2 }}" >> correct_answers.txt
-          echo "3: ${{ secrets.ANSWER_3 }}" >> correct_answers.txt
-          echo "4: ${{ secrets.ANSWER_4 }}" >> correct_answers.txt
-          echo "5: ${{ secrets.ANSWER_5 }}" >> correct_answers.txt
 
-      - name: Extract Participant Answers
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Find participant answer file
         run: |
           ANSWER_FILE=$(find . -name "quiz_answers_*.txt" | head -n 1)
           if [ -z "$ANSWER_FILE" ]; then
             echo "No answer file found!"
             exit 1
           fi
+          echo "Found answer file: $ANSWER_FILE"
 
+      - name: Extract Participant Answers
+        run: |
           grep -o '^[0-9]*: \[x\].*' "$ANSWER_FILE" | sed 's/^\([0-9]*\): \[x\] \(.*\)/\1: \2/' > participant_answers.txt
+
+      # Load correct answers from GitHub secret
+      - name: Create Correct Answers File from Secret
+        run: |
+          echo "$CORRECT_ANSWERS" > correct_answers.txt
+        env:
+          CORRECT_ANSWERS: ${{ secrets.CORRECT_ANSWERS }}
+
+      - name: Print Participant Answers
+        run: cat participant_answers.txt
 
       - name: Compare Answers
         run: |
